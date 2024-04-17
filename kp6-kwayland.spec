@@ -1,15 +1,15 @@
-%define		kdeplasmaver	6.0.3
+%define		kdeplasmaver	6.0.4
 %define		qtver		5.3.2
 %define		kpname		kwayland
 
 Summary:	Qt-style Client library wrapper for the Wayland libraries
 Name:		kp6-%{kpname}
-Version:	6.0.3
+Version:	6.0.4
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	7c2273b104ff7f83930d3e6d92b6c458
+# Source0-md5:	85259ecfc50074418a0f9c7539a4394b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
