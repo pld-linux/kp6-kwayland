@@ -1,21 +1,22 @@
-%define		kdeplasmaver	6.0.5
+%define		kdeplasmaver	6.1.0
 %define		qtver		5.3.2
 %define		kpname		kwayland
 
 Summary:	Qt-style Client library wrapper for the Wayland libraries
 Name:		kp6-%{kpname}
-Version:	6.0.5
+Version:	6.1.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	83985c22ca89897cf17b803a9b50f15e
+# Source0-md5:	790e6e9e7b439bc8b033ac78c47cf3fa
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	wayland-devel
 BuildRequires:	xz
+Obsoletes:	kp5-%{kpname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -28,6 +29,7 @@ Summary:	Header files for %{kpname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kpname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	kp5-%{kpname}-devel < %{version}
 
 %description devel
 Header files for %{kpname} development.
