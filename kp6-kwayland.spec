@@ -1,5 +1,5 @@
 %define		kdeplasmaver	6.1.4
-%define		qtver		5.3.2
+%define		qtver		6.6.0
 %define		kpname		kwayland
 
 Summary:	Qt-style Client library wrapper for the Wayland libraries
@@ -17,6 +17,7 @@ BuildRequires:	plasma-wayland-protocols >= 1.13.0
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	wayland-devel
 BuildRequires:	xz
+BuildRequires:	Qt6WaylandClient-devel >= %{qtver}
 Obsoletes:	kp5-%{kpname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
