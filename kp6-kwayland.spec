@@ -13,7 +13,7 @@ Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{versi
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
-BuildRequires:	plasma-wayland-protocols >= 1.13.0
+BuildRequires:	plasma-wayland-protocols >= 1.13.0-2
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	wayland-devel
 BuildRequires:	xz
