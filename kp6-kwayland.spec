@@ -1,23 +1,23 @@
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		6.6.0
 %define		kpname		kwayland
 
 Summary:	Qt-style Client library wrapper for the Wayland libraries
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	e8da10613fad8c0b46bdb98cc2bf9ca7
+# Source0-md5:	45de1434627f2e5359f4e56582a3ddfe
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6WaylandClient-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	plasma-wayland-protocols-devel >= 1.14.0
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	wayland-devel
 BuildRequires:	xz
-BuildRequires:	Qt6WaylandClient-devel >= %{qtver}
 %requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	kp5-%{kpname} < 6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKWaylandClient.so.*.*
+%{_libdir}/libKWaylandClient.so.*.*
 %ghost %{_libdir}/libKWaylandClient.so.6
 %{_datadir}/qlogging-categories6/kwayland.categories
 %{_datadir}/qlogging-categories6/kwayland.renamecategories
