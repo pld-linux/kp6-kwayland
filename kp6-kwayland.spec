@@ -27,6 +27,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Qt-style Client library wrapper for the Wayland libraries.
 
+%description -l pl.UTF-8
+Biblioteka kliencka w stylu Qt będąca wrapperem dla bibliotek Wayland.
+
 %package devel
 Summary:	Header files for %{kpname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kpname}
