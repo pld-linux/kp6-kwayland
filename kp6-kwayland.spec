@@ -5,7 +5,7 @@
 Summary:	Qt-style Client library wrapper for the Wayland libraries
 Name:		kp6-%{kpname}
 Version:	6.8.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -18,6 +18,7 @@ BuildRequires:	plasma-wayland-protocols-devel >= 1.21.0
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	wayland-devel
 BuildRequires:	xz
+BuildRequires:	kf6-extra-cmake-modules
 %requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	kp5-%{kpname} < 6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
